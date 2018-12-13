@@ -5,17 +5,15 @@ os:
   - linux
   
 before_install:
-  - |
-    (
-      if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install miniconda3 -y --params="'/AddToPath:1'"; fi
-      if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-        wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-        bash miniconda.sh -b -p $HOME/miniconda
-        export PATH="$HOME/miniconda/bin:$PATH"
-        hash -r
-        conda config --set always_yes yes --set changeps1 no
-      fi
-    )
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install miniconda3 -y --params="'/AddToPath:1'"; fi
+  - |  
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+      bash miniconda.sh -b -p $HOME/miniconda
+      export PATH="$HOME/miniconda/bin:$PATH"
+      hash -r
+      conda config --set always_yes yes --set changeps1 no
+    fi
   
 install:
   - conda update -q conda
