@@ -5,11 +5,11 @@ environment:
   matrix:
     # Add here environement variables to control the Travis CI build
     - CONDA_VERSION: "3"
-    - CONDA_RECIPE: "./ffmpeg"
-    - ANACONDA_LOGIN:
-      - secure: txUAXgiDKvPTdioFx3ZTaA==
-    - ANACONDA_PASSWORD:
-      - secure: yVEAsa8oQRYPkPWe6rAL3g==
+  CONDA_RECIPE: "./ffmpeg"
+  ANACONDA_LOGIN:
+    - secure: txUAXgiDKvPTdioFx3ZTaA==
+  ANACONDA_PASSWORD:
+    - secure: yVEAsa8oQRYPkPWe6rAL3g==
 
 install:
   - git clone https://github.com/StatisKit/appveyor-ci.git appveyor-ci
