@@ -1,4 +1,4 @@
-version="4.0.2"
+version="4.1"
 
 conda-build ffmpeg --numpy 1.14 --output-folder ./dump/ffmpeg && cd ./dump/ffmpeg && 
 conda convert --platform osx-64 "./linux-64/ffmpeg-$version-0.tar.bz2" -o . && 

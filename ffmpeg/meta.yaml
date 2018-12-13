@@ -1,5 +1,5 @@
 {% set name = "ffmpeg" %}
-{% set version = "4.0.2" %}
+{% set version = "4.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}-win64-static.zip  # [win]
   url: https://ffmpeg.zeranoe.com/builds/win64/static/{{ name }}-{{ version }}-win64-static.zip  # [win]
-  sha256: 2bf3726d7b489f1fe5609e1f9d93d827fd9e9c9d21b829b254a5bae0c3f60ec8  # [win]
+  sha256: cf6f4a00de1e39667116c4f19184e10437ae929fde5aa1cc289747a881fda935  # [win]
 
   fn: {{ name }}-release-64bit-static.tar.xz  # [not win]
   url: https://johnvansickle.com/ffmpeg/releases/{{ name }}-release-64bit-static.tar.xz  # [not win]
-  sha256: 6967b1f475b4f121e829d09a1d586d6e31e5cc6fdfe2dc890fa1a998dbb0bdf7  # [not win]
+  sha256: 47b0d0cfd43e16f33e566832c1c78063d62e90aa217997573105eccc93327239  # [not win]
 
 test:
   commands:
