@@ -7,9 +7,8 @@ os:
 before_install:
   - |
     (
-      if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
-        choco install -y miniconda3 --params="'/AddToPath:1'"
-      else
+      if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install miniconda3 -y --params="'/AddToPath:1'"; fi
+      if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
         wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
         bash miniconda.sh -b -p $HOME/miniconda
         export PATH="$HOME/miniconda/bin:$PATH"
