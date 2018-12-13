@@ -21,7 +21,7 @@ install:
   - travis_retry conda install -y python=3.6 conda-build anaconda-client conda-verify
   
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then build_ffmpeg.bat; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build_ffmpeg.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then build-ffmpeg.bat; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then build-ffmpeg.sh; fi
     
 after_success: # Nothing to do
