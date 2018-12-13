@@ -6,14 +6,13 @@ package:
   version: "{{ version }}"
 
 source:
-  fn: {{ name }}-release-64bit-static.tar.xz  # [not win]
-  url: https://johnvansickle.com/ffmpeg/releases/{{ name }}-release-64bit-static.tar.xz  # [not win]
-  sha256: 47b0d0cfd43e16f33e566832c1c78063d62e90aa217997573105eccc93327239  # [not win]
+  fn: {{ name }}-release-64bit-static.tar.xz
+  url: https://johnvansickle.com/ffmpeg/releases/{{ name }}-release-64bit-static.tar.xz
+  sha256: 47b0d0cfd43e16f33e566832c1c78063d62e90aa217997573105eccc93327239
 
 test:
   commands:
-    - ffmpeg -version  # [not win]
-    - ffmpeg.exe -version  # [win]
+    - ffmpeg -version
 
 about:
   home: http://www.ffmpeg.org/
