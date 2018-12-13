@@ -22,6 +22,6 @@ install:
   
 script:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then build_ffmpeg.bat; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then bash ./build_ffmpeg.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./build_ffmpeg.sh; fi
     
 after_success: # Nothing to do
