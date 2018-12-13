@@ -1,5 +1,3 @@
-language: python
-
 os:
   - windows
   - linux
@@ -25,7 +23,7 @@ script:
     if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
       build_ffmpeg.bat;
     else
-      bash ./build_ffmpeg.sh
+      bash ./build_ffmpeg.sh;
     fi
     
 after_success: # Nothing to do
