@@ -1,0 +1,20 @@
+language: shell
+
+os:
+  - linux
+  
+before_install:
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  
+install:
+  - conda update -q conda
+  - travis_retry conda install -y python=3.6 conda-build anaconda-client conda-verify
+  
+script:
+  - bash ./build-ffmpeg-python.sh
+    
+after_success: # Nothing to do
