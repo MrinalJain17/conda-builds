@@ -1,4 +1,4 @@
-version="18.6b4"
+version="18.9b0"
 
 conda-build black --numpy 1.14 --output-folder ./dump/black && cd ./dump/black && 
 conda convert --platform win-64 "./linux-64/black-$version-py36_0.tar.bz2" -o . && 
