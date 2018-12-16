@@ -1,0 +1,58 @@
+{% set name = "black" %}
+{% set version = "18.6b4" %}
+{% set sha256 = "22158b89c1a6b4eb333a1e65e791a3f8b998cf3b11ae094adb2570f31f769a44" %}
+
+# This code is taken from the conda-forge feedstock of black
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - black = black:main
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - click >=6.5
+    - attrs >=18.1.0
+    - appdirs
+    - toml >=0.9.4
+
+test:
+  commands:
+    - black --help
+
+about:
+  home: https://github.com/ambv/black
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'The Uncompromising Code Formatter'
+
+  description: |
+    Black is the uncompromising Python code formatter. By using it, you agree
+    to cease control over minutiae of hand-formatting. In return, Black gives
+    you speed, determinism, and freedom from pycodestyle nagging about
+    formatting. You will save time and mental energy for more important matters.
+  doc_url: https://github.com/ambv/black
+  dev_url: https://github.com/ambv/black
+
+extra:
+  recipe-maintainers:
+    - carlodri
+    - ambv
+    - mariusvniekerk
+    - xhochy
