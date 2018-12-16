@@ -21,10 +21,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - click >=6.5
     - attrs >=18.1.0
     - appdirs
