@@ -1,4 +1,4 @@
-version="0.5.0"
+version="0.5.0.post0"
 
 conda-build skorch --numpy 1.14 --output-folder ./dump/skorch && cd ./dump/skorch && 
 conda convert --platform win-64 ./linux-64/*.tar.bz2 -o . && 

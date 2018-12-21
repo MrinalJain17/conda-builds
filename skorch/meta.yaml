@@ -1,13 +1,13 @@
 {% set name = "skorch" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "154e24e6cbd608cc41cbc8c515e980390c46a52b8380958d2f590205cd1f7674" %}
+{% set version = "0.5.0.post0" %}
+{% set sha256 = "e7646ec1d796509927782a036f617716ce9a2da7981035b2ca73a614f09c25b5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}-py3-none-any.whl
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
