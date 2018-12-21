@@ -13,3 +13,4 @@ The recipes for different libraries/tools are stored in their **seperate branche
 | [FFmpeg](http://www.ffmpeg.org/) | [Branch](https://github.com/MrinalJain17/conda-builds/tree/ffmpeg) | [Link](https://anaconda.org/mrinaljain17/ffmpeg) |
 | [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) | [Branch](https://github.com/MrinalJain17/conda-builds/tree/ffmpeg-python) | [Link](https://anaconda.org/mrinaljain17/ffmpeg-python) |
 | [Black](https://github.com/ambv/black) | [Branch](https://github.com/MrinalJain17/conda-builds/tree/black) | [Link](https://anaconda.org/MrinalJain17/black) |
+| [Skorch](https://github.com/dnouri/skorch) | [Branch](https://github.com/MrinalJain17/conda-builds/tree/skorch) | [Link](https://anaconda.org/MrinalJain17/skorch) |
