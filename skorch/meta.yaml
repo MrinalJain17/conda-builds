@@ -1,6 +1,6 @@
 {% set name = "skorch" %}
-{% set version = "0.5.0.post0" %}
-{% set sha256 = "e7646ec1d796509927782a036f617716ce9a2da7981035b2ca73a614f09c25b5" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "4ee4c67bf8a412a5b583a1ac4c5e4b6b92c8d98ae9319eafa977ce8209e0fc93" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.13.3
     - setuptools
     - scikit-learn >=0.19.1
-    - scipy >=0.19.0
+    - scipy >=1.1.0
     - tabulate >=0.7.7
     - tqdm >=4.14.0
 
@@ -33,10 +33,10 @@ test:
     - numpy
 
 about:
-  home: https://github.com/dnouri/skorch
+  home: https://github.com/skorch-dev/skorch
   license: BSD-3
   license_family: BSD
   license_file: LICENSE
   summary: A scikit-learn compatible neural network library that wraps pytorch
   doc_url: https://skorch.readthedocs.io/en/latest/
-  dev_url: https://github.com/dnouri/skorch
+  dev_url: https://github.com/skorch-dev/skorch
