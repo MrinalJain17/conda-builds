@@ -1,4 +1,4 @@
-version="0.1.17"
+version="0.1.18"
 
 conda-build ffmpeg-python --numpy 1.14 --output-folder ./dump/ffmpeg_python && cd ./dump/ffmpeg_python && 
 conda convert --platform win-64 "./linux-64/ffmpeg-python-$version-py36_0.tar.bz2" -o . && 
